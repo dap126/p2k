@@ -15,48 +15,62 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::create([
-            'name' => 'harunyahya',
-            'email' => 'haryah@example.com',
-            'password' => bcrypt('harunyhy1'),
-            'role' => 'user'
-        ]);
-        User::create([
-            'name' => 'mahyadi',
-            'email' => 'mahyadi@example.com',
-            'password' => bcrypt('mahyadi12'),
-            'role' => 'user'
-        ]);
-        User::create([
-            'name' => 'admin',
-            'email' => 'admin@example.com',
-            'password' => bcrypt('admin123'),
-            'role' => 'admin'
-        ]);
-        User::create([
-            'name' => 'hanif',
-            'email' => 'hanif@example.com',
-            'password' => bcrypt('hanif123'),
-            'role' => 'user'
-        ]);
-        User::create([
-            'name' => 'nurul',
-            'email' => 'nurul@example.com',
-            'password' => bcrypt('nurul123'),
-            'role' => 'user'
-        ]);
-        User::create([
-            'name' => 'yahya',
-            'email' => 'yahya@example.com',
-            'password' => bcrypt('yahya123'),
-            'role' => 'user'
-        ]);
-        User::create([
-            'name' => 'mutia',
-            'email' => 'mutia@example.com',
-            'password' => bcrypt('mutia123'),
-            'role' => 'user'
-        ]);
+        User::updateOrCreate(
+            ['email' => 'haryah@example.com'],
+            [
+                'name' => 'harunyahya',
+                'password' => bcrypt('harunyhy1'),
+                'role' => 'user'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'mahyadi@example.com'],
+            [
+                'name' => 'mahyadi',
+                'password' => bcrypt('mahyadi12'),
+                'role' => 'user'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'admin@example.com'],
+            [
+                'name' => 'admin',
+                'password' => bcrypt('admin123'),
+                'role' => 'admin'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'hanif@example.com'],
+            [
+                'name' => 'hanif',
+                'password' => bcrypt('hanif123'),
+                'role' => 'user'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'nurul@example.com'],
+            [
+                'name' => 'nurul',
+                'password' => bcrypt('nurul123'),
+                'role' => 'user'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'yahya@example.com'],
+            [
+                'name' => 'yahya',
+                'password' => bcrypt('yahya123'),
+                'role' => 'user'
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'mutia@example.com'],
+            [
+                'name' => 'mutia',
+                'password' => bcrypt('mutia123'),
+                'role' => 'user'
+            ]
+        );
         $this->call(LaporanSeeder::class);
     }
 }
