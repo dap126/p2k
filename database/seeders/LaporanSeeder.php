@@ -19,6 +19,7 @@ class LaporanSeeder extends Seeder
             'tanggal_melapor' => Carbon::parse('2025-06-20'),
             'lokasi_kerusakan' => 'Ruang Lab 2',
             'deskripsi_kerusakan' => 'Proyektor tidak menyala.',
+            'status' => 'proses',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
