@@ -20,6 +20,7 @@ class LaporanSeeder extends Seeder
             'lokasi_kerusakan' => 'Ruang Lab 2',
             'deskripsi_kerusakan' => 'Proyektor tidak menyala.',
             'status' => 'proses',
+            'user_id' => 1, // pastikan user dengan id 1 ada di tabel users
             'created_at' => now(),
             'updated_at' => now(),
         ]);
